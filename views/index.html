@@ -1,0 +1,47 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL Shortener</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h2><a href="http://www.freecodecamp.org" target="_blank">Freecodecamp</a> URL Shortener Microservice</h2>
+    <p>Takes a url as a parameter and returns a shortened url that routes to given url</p>
+    <ul>
+    <li>If I pass paramenter "/new/[url]", browser will receive a shorted url in the JSON response to the GET request</li>
+    <li>The new URL will be of the form "[this app]/####" where # is a 4-digit number eg. 9392</li>
+    <li>If I enter the new URL I will be redirected to the URL originally associated with the shortened URL</li>
+    </ul>
+    
+  <h3>
+    Example of shortened URL Creation
+  </h3>
+  <code>https://linen-pound.glitch.me/new/https://www.google.com</code><br>
+  <code>https://linen-pound.glitch.me/http://foo.com:80</code>
+  <h3>Example of JSON output in response to creation request
+  </h3>
+  <code>{ "original_url":"http://foo.com:80", "short_url":"https://linen-pound.glitch.me/8170" }</code>
+  <h3>
+    Example of Usage of shortened URL:
+  </h3>
+  <code>https://linen-pound.glitch.me/2871</code>
+  <h3>
+    In this example, shortened URL will redirect to:
+  </h3>
+  <code>https://www.google.com/</code>
+  </body>
+</html>
